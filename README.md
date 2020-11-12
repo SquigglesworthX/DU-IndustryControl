@@ -2,21 +2,21 @@
 This highly customizable script will allow you to connect containers, industries and screens to allow monitoring and control over the attached industries. This script requires customization for each setup, so it will require technical/programming skills to implement. Some elements of this were adapted from https://github.com/thespartacus29/DualUniverse-OreMonitor, so thanks goes to thespartacus29 for the open code. 
 
 ## Change Log
-- 11/03/2020 - Initial Load
+* 11/03/2020 - Initial Load
 
 ## Elements required
 
-- 1 Screen per 8 industries/containers
-- 1 Programming Board per 8 industries/containers
-- 1 Databank per 10 Programming Boards
-- As many switches, relays and buttons as necessary 
+* 1 Screen per 8 industries/containers
+* 1 Programming Board per 8 industries/containers
+* 1 Databank per 10 Programming Boards
+* As many switches, relays and buttons as necessary 
 
 ## Linking Setup
 
 Each Programming Board is configured with the following links:
-- 1 "Screen" slot to be connected to any size screen. This is a mandatory component.
-- 1 "Databank" slot to be connected to any size screen. This is an optional component and is only used to save settings to allow quick updates. 
-- 8 "element" slots. These can be connected to either an industry element such as an Assembly Line or Metalworker, or to a container or container hub. The display will adjust automatically depending on what was connected to it.
+* 1 "Screen" slot to be connected to any size screen. This is a mandatory component.
+* 1 "Databank" slot to be connected to any size screen. This is an optional component and is only used to save settings to allow quick updates. 
+* 8 "element" slots. These can be connected to either an industry element such as an Assembly Line or Metalworker, or to a container or container hub. The display will adjust automatically depending on what was connected to it.
 
 ## Setup Parameters
 All modifiable params are at the top of unit.start() and are marked with an --export:.
@@ -81,18 +81,18 @@ Sends a hard stop to all machines, and then restarts them. It uses a safe hard s
 
 ## Sample Setup - Pure Carbon
 This sample setup is used to produce Pure Carbon. You will need 1 screen, 1 databank, 1 container/container hub, and 1 or more refiners. You can control the industries entirely from the connected screen, so update the maintain amounts in the config and use the "Start", "Stop" and "Restart" buttons to issue commands to all attached machines at once. Additionally, warnings and errors will be presented under the following circumstances:
-- warning for low ore (less than 50%)
-- error for really low ore (less than 25%)
-- warning for high efficiency (over 90%, but can be adjusted below). This is useful for determining bottle necks in production as I will usually add a machine if all machines are running over 90%. 
-- error if a machine in a state other than "RUNNING" or "PENDING". The specific error is displayed on the screen and can be used to troubleshoot. 
-- warning for "Overstock" amount. This may happen if too much by product builds up in the bin. 
-- error for "Overstock" amount. This may happen if way too much by product builds up in the bin. 
+* warning for low ore (less than 50%)
+* error for really low ore (less than 25%)
+* warning for high efficiency (over 90%, but can be adjusted below). This is useful for determining bottle necks in production as I will usually add a machine if all machines are running over 90%. 
+* error if a machine in a state other than "RUNNING" or "PENDING". The specific error is displayed on the screen and can be used to troubleshoot. 
+* warning for "Overstock" amount. This may happen if too much by product builds up in the bin. 
+* error for "Overstock" amount. This may happen if way too much by product builds up in the bin. 
 
 Machine Connections:
-Screen - To an XS Screen
-Databank - To any databank
-Element1 - To a container or container hub holding the pure carbon
-Element2-8 - To refiners that have the "Pure Carbon" recipe applied. 
+* Screen - To an XS Screen
+* Databank - To any databank
+* Element1 - To a container or container hub holding the pure carbon
+* Element2-8 - To refiners that have the "Pure Carbon" recipe applied. 
 
 Startup Parameters
 machineName = "Pure Carbon" --export: The product being made
@@ -134,16 +134,16 @@ itemMassOverride8=0
 
 ## Sample Setup - Pure Carbon TU
 This sample setup is used to create additional links for Pure Carbon to be used for other industries. You will need 1 screen, 1 databank, 1-4 container/container hubs, and 1-4 transfer units. You can control the industries entirely from the connected screen, so update the maintain amounts in the config and use the "Start", "Stop" and "Restart" buttons to issue commands to all attached machines at once. Additionally, warnings and errors will be presented under the following circumstances:
-- warning for low ore (less than 50%) on any of the attached containers.
-- error for really low ore (less than 25%) on any of the attached containers.
-- warning for high efficiency (over 90%, but can be adjusted below).
-- error if a machine in a state other than "RUNNING" or "PENDING". The specific error is displayed on the screen and can be used to troubleshoot. 
+* warning for low ore (less than 50%) on any of the attached containers.
+* error for really low ore (less than 25%) on any of the attached containers.
+* warning for high efficiency (over 90%, but can be adjusted below).
+* error if a machine in a state other than "RUNNING" or "PENDING". The specific error is displayed on the screen and can be used to troubleshoot. 
 
 Machine Connections:
-Screen - To an XS Screen
-Databank - To any databank
-Element1,3,5,8 - To a container or container hub holding the pure carbon
-Element2,4,6,8 - To refiners that have the "Pure Carbon" recipe applied. 
+* Screen - To an XS Screen
+* Databank - To any databank
+* Element1,3,5,8 - To a container or container hub holding the pure carbon
+* Element2,4,6,8 - To refiners that have the "Pure Carbon" recipe applied. 
 
 Startup Parameters
 machineName = "Pure Carbon TU" --export: The product being made
@@ -193,9 +193,9 @@ Containers could be considered optional here, so you could run up to 8 Transfer 
 This sample setup is used to remove by products from pure and product bins. You will need 1 screen, 1 databank, 1-8 transfer units. You can control the industries entirely from the connected screen, so update the maintain amounts in the config and use the "Start", "Stop" and "Restart" buttons to issue commands to all attached machines at once. Errors are disabled in this mode, so you are unlikely to see any other status than green.
 
 Machine Connections:
-Screen - To an XS Screen
-Databank - To any databank
-Element1-8 - To a transfer unit connected to a pure or product bin set to a recipe to remove by products. For example, removing oxygen from Carbon and Iron pures, or removing catalyst 3 from any T3 product. 
+* Screen - To an XS Screen
+* Databank - To any databank
+* Element1-8 - To a transfer unit connected to a pure or product bin set to a recipe to remove by products. For example, removing oxygen from Carbon and Iron pures, or removing catalyst 3 from any T3 product. 
 
 Startup Parameters
 machineName = "Clearing TU" --export: The product being made

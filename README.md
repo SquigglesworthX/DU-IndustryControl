@@ -1,5 +1,5 @@
 # DualUniverse-IndustryCommandCenter
-This highly customizable script will allow you to connect containers, industries and screens to allow monitoring and control over the attached industries. This script requires customization for each setup, so may require slightly more technical skills to implement. Some elements of this were adapted from https://github.com/thespartacus29/DualUniverse-OreMonitor, so thanks goes to thespartacus29 for the open code. 
+This highly customizable script will allow you to connect containers, industries and screens to allow monitoring and control over the attached industries. This script requires customization for each setup, so it will require technical/programming skills to implement. Some elements of this were adapted from https://github.com/thespartacus29/DualUniverse-OreMonitor, so thanks goes to thespartacus29 for the open code. 
 
 ## Change Log
 - 11/03/2020 - Initial Load
